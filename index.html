@@ -23,13 +23,15 @@ layout: none
     .hero p { color: #8b949e; font-size: 1.05rem; max-width: 520px; margin: 0 auto 1.5rem; }
     .badge { display: inline-block; background: #1f2d1f; color: #3fb950; border: 1px solid #238636; border-radius: 2rem; padding: 0.25rem 0.85rem; font-size: 0.8rem; margin: 0 0.25rem; }
     .badge.red { background: #2d1f1f; color: #f85149; border-color: #da3633; }
+    .badge.blue { background: #1a2332; color: #58a6ff; border-color: #1f6feb; }
     .container { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
     .section-title { font-size: 1rem; font-weight: 600; color: #8b949e; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
     .advisory-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; transition: border-color 0.2s; }
     .advisory-card:hover { border-color: #58a6ff; }
-    .card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-    .cve-id { font-family: monospace; font-size: 0.95rem; font-weight: 700; color: #f85149; background: #2d1f1f; border: 1px solid #da3633; border-radius: 4px; padding: 0.15rem 0.5rem; }
-    .severity { font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 2rem; background: #2d221a; color: #e3b341; border: 1px solid #9e6a03; }
+    .card-header { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .cve-id { font-family: monospace; font-size: 0.88rem; font-weight: 700; color: #f85149; background: #2d1f1f; border: 1px solid #da3633; border-radius: 4px; padding: 0.15rem 0.5rem; }
+    .severity { font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.6rem; border-radius: 2rem; }
+    .severity.high { background: #2d221a; color: #e3b341; border: 1px solid #9e6a03; }
     .card-title { font-size: 1rem; font-weight: 600; color: #f0f6fc; margin-bottom: 0.35rem; }
     .card-meta { font-size: 0.8rem; color: #8b949e; }
     .card-meta span { margin-right: 1rem; }
@@ -50,13 +52,31 @@ layout: none
   <p>CVE advisories and vulnerability research. Focused on web application security and information disclosure.</p>
   <span class="badge">CVE Researcher</span>
   <span class="badge red">Path Traversal</span>
+  <span class="badge blue">XSS</span>
 </div>
 <div class="container">
   <div class="section-title">Security Advisories</div>
+
+  <div class="advisory-card">
+    <div class="card-header">
+      <span class="cve-id">CVE-2025-54880</span>
+      <span class="cve-id">CVE-2025-54881</span>
+      <span class="severity high">High</span>
+    </div>
+    <div class="card-title">
+      <a href="mermaid-xss-cve-2025-54880.html">Mermaid.js XSS Deep Dive: Architecture Diagram Icon Injection</a>
+    </div>
+    <div class="card-meta">
+      <span>📅 2026-05-31</span>
+      <span>🏢 Mermaid.js</span>
+      <span>⚠️ XSS / Supply Chain</span>
+    </div>
+  </div>
+
   <div class="advisory-card">
     <div class="card-header">
       <span class="cve-id">CVE-2025-65478</span>
-      <span class="severity">High</span>
+      <span class="severity high">High</span>
     </div>
     <div class="card-title">
       <a href="CVE-2025-65478.html">Path Traversal in Mirth Connect Administrator 3.5.x</a>
@@ -67,6 +87,7 @@ layout: none
       <span>⚠️ CWE-22</span>
     </div>
   </div>
+
 </div>
 <footer>&copy; 2026 EMonkey (0xSY-SEC) &mdash; Security Research Blog</footer>
 </body>
