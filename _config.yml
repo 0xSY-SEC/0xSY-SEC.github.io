@@ -1,0 +1,9 @@
+title: "0xSY-SEC | Security Research"
+description: "CVE advisories and vulnerability research by EMonkey"
+url: "https://0xSY-SEC.github.io"
+author: "EMonkey"
+github_username: "0xSY-SEC"
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
