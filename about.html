@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | 0xSY-SEC</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 1.3rem; font-weight: 700; color: #f0f6fc; }
+    .logo span { color: #f78166; }
+    nav a { margin-left: 1.5rem; color: #8b949e; font-size: 0.9rem; }
+    nav a:hover { color: #f0f6fc; text-decoration: none; }
+    .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .profile { display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 3rem; }
+    .avatar { width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(135deg, #f78166 0%, #da3633 100%); display: flex; align-items: center; justify-content: center; font-size: 2.8rem; flex-shrink: 0; border: 3px solid #30363d; }
+    .profile-info h1 { font-size: 1.8rem; color: #f0f6fc; margin-bottom: 0.25rem; }
+    .profile-info .handle { color: #f78166; font-family: monospace; font-size: 1rem; margin-bottom: 0.75rem; }
+    .profile-info .tagline { color: #8b949e; font-size: 0.95rem; margin-bottom: 1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag { background: #161b22; border: 1px solid #30363d; color: #8b949e; border-radius: 2rem; padding: 0.2rem 0.75rem; font-size: 0.78rem; }
+    .tag.green { color: #3fb950; border-color: #238636; background: #1f2d1f; }
+    .tag.blue { color: #58a6ff; border-color: #1f6feb; background: #1a2332; }
+    .tag.red { color: #f85149; border-color: #da3633; background: #2d1f1f; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-size: 1rem; font-weight: 600; color: #8b949e; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+    .section p { color: #c9d1d9; margin-bottom: 0.85rem; }
+    .edu-card, .exp-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.1rem 1.4rem; margin-bottom: 0.75rem; display: flex; gap: 1rem; align-items: flex-start; }
+    .edu-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .edu-name { font-weight: 600; color: #f0f6fc; font-size: 0.95rem; }
+    .edu-sub { color: #8b949e; font-size: 0.83rem; margin-top: 0.15rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.75rem; }
+    .skill { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 0.75rem 1rem; }
+    .skill-name { color: #f0f6fc; font-size: 0.88rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .skill-bar { height: 4px; background: #21262d; border-radius: 2px; overflow: hidden; }
+    .skill-fill { height: 100%; border-radius: 2px; }
+    .fill-red { background: #f78166; }
+    .fill-blue { background: #58a6ff; }
+    .fill-green { background: #3fb950; }
+    .fill-yellow { background: #e3b341; }
+    .contact-box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.75rem; color: #c9d1d9; font-size: 0.9rem; }
+    .contact-item span:first-child { font-size: 1.1rem; width: 1.5rem; text-align: center; }
+    .cve-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: #2d1f1f; border: 1px solid #da3633; border-radius: 4px; padding: 0.15rem 0.5rem; font-family: monospace; font-size: 0.85rem; color: #f85149; }
+    footer { text-align: center; padding: 2rem; border-top: 1px solid #21262d; color: #484f58; font-size: 0.85rem; }
+    @media (max-width: 600px) { .profile { flex-direction: column; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo"><a href="/" style="color:inherit;text-decoration:none">0x<span>SY</span>-SEC</a></div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="https://github.com/0xSY-SEC" target="_blank">GitHub</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="profile">
+    <div class="avatar">🐒</div>
+    <div class="profile-info">
+      <h1>EMonkey</h1>
+      <div class="handle">@0xSY-SEC</div>
+      <div class="tagline">Computer Science student @ Harvard University · Security Researcher · CVE Hunter</div>
+      <div class="tags">
+        <span class="tag green">CVE Researcher</span>
+        <span class="tag red">Web AppSec</span>
+        <span class="tag blue">Harvard '26</span>
+        <span class="tag">Bug Bounty</span>
+        <span class="tag">CTF Player</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Hey, I'm EMonkey — a Computer Science student at Harvard University with a deep passion for offensive security and vulnerability research. I spend my free time hunting bugs, digging through application source code, and trying to break things before the bad guys do.</p>
+    <p>I started my security journey at 16 when I discovered my first local file inclusion bug in a school website. Since then, I've reported vulnerabilities to multiple vendors, earned CVE credits, and competed in dozens of CTF competitions across Asia and North America.</p>
+    <p>When I'm not staring at HTTP traffic or reading CVE advisories, you'll find me hiking in the White Mountains, brewing pour-over coffee, or losing sleep over a particularly stubborn CTF challenge.</p>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="edu-name">Harvard University</div>
+        <div class="edu-sub">B.S. Computer Science · Class of 2026 · GPA 3.9/4.0</div>
+        <div class="edu-sub" style="margin-top:0.4rem">Courses: Operating Systems, Network Security, Cryptography, Systems Programming</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Experience &amp; Highlights</h2>
+    <div class="exp-card">
+      <div class="edu-icon">🔬</div>
+      <div>
+        <div class="edu-name">Independent Security Researcher</div>
+        <div class="edu-sub">2023 – Present</div>
+        <div class="edu-sub" style="margin-top:0.4rem">Discovered and reported path traversal, SSRF, and authentication bypass vulnerabilities across multiple open-source projects. Credited with <span class="cve-badge">CVE-2025-65478</span> for a path traversal vulnerability in Mirth Connect Administrator 3.5.x.</div>
+      </div>
+    </div>
+    <div class="exp-card">
+      <div class="edu-icon">🏆</div>
+      <div>
+        <div class="edu-name">CTF Competitor</div>
+        <div class="edu-sub">Harvard Cyber Club · 2022 – Present</div>
+        <div class="edu-sub" style="margin-top:0.4rem">Top 5% finish at DEF CON CTF Qualifier 2024. Active member of the Harvard Cyber Club CTF team. Focus areas: web exploitation, reverse engineering, and binary exploitation.</div>
+      </div>
+    </div>
+    <div class="exp-card">
+      <div class="edu-icon">🐛</div>
+      <div>
+        <div class="edu-name">Bug Bounty Hunter</div>
+        <div class="edu-sub">HackerOne · Bugcrowd · 2023 – Present</div>
+        <div class="edu-sub" style="margin-top:0.4rem">Reported 20+ valid vulnerabilities across multiple bug bounty programs. Specialties include path traversal, broken access control, and server-side request forgery (SSRF).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><div class="skill-name">Web App Pentesting</div><div class="skill-bar"><div class="skill-fill fill-red" style="width:92%"></div></div></div>
+      <div class="skill"><div class="skill-name">Python / Scripting</div><div class="skill-bar"><div class="skill-fill fill-blue" style="width:88%"></div></div></div>
+      <div class="skill"><div class="skill-name">Burp Suite / OWASP</div><div class="skill-bar"><div class="skill-fill fill-red" style="width:90%"></div></div></div>
+      <div class="skill"><div class="skill-name">Linux / Networking</div><div class="skill-bar"><div class="skill-fill fill-green" style="width:85%"></div></div></div>
+      <div class="skill"><div class="skill-name">CTF / Reverse Eng.</div><div class="skill-bar"><div class="skill-fill fill-yellow" style="width:78%"></div></div></div>
+      <div class="skill"><div class="skill-name">C / C++</div><div class="skill-bar"><div class="skill-fill fill-blue" style="width:72%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <div class="contact-item"><span>📧</span><a href="mailto:zhaishen095@gmail.com">zhaishen095@gmail.com</a></div>
+      <div class="contact-item"><span>🐙</span><a href="https://github.com/0xSY-SEC" target="_blank">github.com/0xSY-SEC</a></div>
+      <div class="contact-item"><span>📍</span><span>Cambridge, Massachusetts, USA</span></div>
+      <div class="contact-item"><span>💬</span><span>Open to vulnerability disclosure collaborations, CTF team invites, and security internships.</span></div>
+    </div>
+  </div>
+
+</div>
+<footer>&copy; 2026 EMonkey (0xSY-SEC) &mdash; Security Research Blog</footer>
+</body>
+</html>
