@@ -41,3 +41,9 @@ figure.wechat-qr figcaption {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* Article diagrams are 16:9 SVGs; scale them to the column. */
+.article-content figure:not(.wechat-qr) img {
+  width: 100%;
+  height: auto;
+}
