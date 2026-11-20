@@ -7,3 +7,37 @@ img.logo {
   border-radius: 9999px;
   object-fit: cover;
 }
+
+/* WeChat QR sits on a white card so it stays scannable in light and dark mode. */
+figure.wechat-qr {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem 1.25rem 0.85rem;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 0.06);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.08);
+}
+
+html.dark figure.wechat-qr {
+  background: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
+}
+
+figure.wechat-qr img {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+figure.wechat-qr figcaption {
+  margin-top: 0.75rem;
+  text-align: center;
+  color: #262626;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

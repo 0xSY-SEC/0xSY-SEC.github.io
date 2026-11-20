@@ -21,13 +21,12 @@ showWordCount: false
 
 公众号「0xSY」，同步更新文章。
 
-<!-- 二维码：将图片放到 assets/img/wechat-qr.png 后，取消下一行注释。 -->
-<!-- ![公众号「0xSY」](wechat-qr.png) -->
+![公众号「0xSY」二维码](img/wechat-qr.jpg "微信扫码关注公众号「0xSY」")
+{.wechat-qr}
 
 ## 找到我
 
 - GitHub：<https://github.com/0xSY-SEC>
-- X：<https://x.com/CyberForceX>
 
 ## 免责声明
 
