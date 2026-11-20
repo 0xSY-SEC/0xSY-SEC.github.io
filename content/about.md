@@ -12,7 +12,6 @@ showWordCount: false
 
 ## 研究方向
 
-- 移动安全（Android / 鸿蒙）
 - Web 安全
 - 漏洞研究
 - 安全工具与自动化

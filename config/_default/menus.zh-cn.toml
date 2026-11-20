@@ -23,12 +23,6 @@
   weight = 11
 
 [[main]]
-  name = "移动安全"
-  parent = "posts"
-  pageRef = "posts/mobile-security"
-  weight = 12
-
-[[main]]
   name = "Web 安全"
   parent = "posts"
   pageRef = "posts/web-security"

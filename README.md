@@ -20,12 +20,11 @@ git submodule update --init --recursive
 
 ## 写一篇文章
 
-文章放进五个栏目之一，不要直接放在 `content/posts/` 根目录：
+文章放进四个栏目之一，不要直接放在 `content/posts/` 根目录：
 
 | 栏目 | 目录 |
 | --- | --- |
 | 漏洞研究 | `content/posts/vuln-research/` |
-| 移动安全 | `content/posts/mobile-security/` |
 | Web 安全 | `content/posts/web-security/` |
 | 工具与开发 | `content/posts/tooling/` |
 | 随笔 | `content/posts/notes/` |
