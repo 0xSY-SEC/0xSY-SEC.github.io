@@ -1,0 +1,11 @@
+# Keys missing from the pinned Blowfish zh-CN catalog.
+# Without 404_home, the 404 button falls back to the partial default "Learn more".
+error:
+  404_home: "返回首页"
+
+nav:
+  close_menu: "关闭菜单"
+  footer_menu: "页脚菜单"
+  main_menu: "主菜单"
+  mobile_menu: "移动端菜单"
+  toggle_submenu: "展开或收起子菜单"
