@@ -4,6 +4,8 @@ date: 2026-11-20
 draft: false
 description: "这个站点用来记录安全研究和技术笔记。"
 summary: "站点已经搭好。之后的笔记会写在这里。"
+aliases:
+  - /posts/welcome/
 ---
 
 这是第一篇短记，用来确认站点可以正常发布。

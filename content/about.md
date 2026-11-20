@@ -6,7 +6,29 @@ showReadingTime: false
 showWordCount: false
 ---
 
-这是 0xSY 的个人站点，用来记录安全研究和技术笔记。
+## 关于我
+
+安全研究员，在这里写安全研究与技术笔记。
+
+## 研究方向
+
+- 移动安全（Android / 鸿蒙）
+- Web 安全
+- 漏洞研究
+- 安全工具与自动化
+
+## 公众号
+
+公众号「0xSY」，同步更新文章。
+
+<!-- 二维码：将图片放到 assets/img/wechat-qr.png 后，取消下一行注释。 -->
+<!-- ![公众号「0xSY」](wechat-qr.png) -->
+
+## 找到我
 
 - GitHub：<https://github.com/0xSY-SEC>
 - X：<https://x.com/CyberForceX>
+
+## 免责声明
+
+本站内容仅供学习，以及在获得授权的前提下开展安全研究。请勿用于未经授权的测试。文中观点仅代表个人。

@@ -11,9 +11,40 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
+  identifier = "posts"
   name = "文章"
   pageRef = "posts"
   weight = 10
+
+[[main]]
+  name = "漏洞研究"
+  parent = "posts"
+  pageRef = "posts/vuln-research"
+  weight = 11
+
+[[main]]
+  name = "移动安全"
+  parent = "posts"
+  pageRef = "posts/mobile-security"
+  weight = 12
+
+[[main]]
+  name = "Web 安全"
+  parent = "posts"
+  pageRef = "posts/web-security"
+  weight = 13
+
+[[main]]
+  name = "工具与开发"
+  parent = "posts"
+  pageRef = "posts/tooling"
+  weight = 14
+
+[[main]]
+  name = "随笔"
+  parent = "posts"
+  pageRef = "posts/notes"
+  weight = 15
 
 [[main]]
   name = "关于"

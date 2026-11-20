@@ -1,0 +1,9 @@
+/* Keep the header mark small and round so the site title stays readable beside it. */
+img.logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
