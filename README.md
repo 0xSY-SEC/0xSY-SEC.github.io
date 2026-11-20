@@ -30,7 +30,7 @@ hugo new content posts/my-note.md
 
 工作流在 `.github/workflows/gh-pages.yml`。推送到 `main` 后，Actions 用 Hugo Extended 执行 `hugo --minify`，并把 `public/` 发布到 `gh-pages` 分支。
 
-GitHub Pages 的构建来源需要设为 **`gh-pages` 分支**：
+GitHub Pages 的构建来源需要设为 **`gh-pages` 分支**。这个仓库目前的 Pages 来源是 **`main`**，那样会直接发布源码，而不是 Hugo 生成的站点。合并后请改成：
 
 **Settings → Pages → Build and deployment → Source** 选择 **Deploy from a branch**，Branch 选择 **`gh-pages`**，文件夹选择 **`/ (root)`**。
 
