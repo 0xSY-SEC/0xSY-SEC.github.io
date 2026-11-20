@@ -20,11 +20,43 @@ git submodule update --init --recursive
 
 ## 写一篇文章
 
+文章放进五个栏目之一，不要直接放在 `content/posts/` 根目录：
+
+| 栏目 | 目录 |
+| --- | --- |
+| 漏洞研究 | `content/posts/vuln-research/` |
+| 移动安全 | `content/posts/mobile-security/` |
+| Web 安全 | `content/posts/web-security/` |
+| 工具与开发 | `content/posts/tooling/` |
+| 随笔 | `content/posts/notes/` |
+
+例如写一篇 Web 安全笔记：
+
 ```bash
-hugo new content posts/my-note.md
+hugo new content posts/web-security/my-note.md
 ```
 
-然后编辑 `content/posts/my-note.md`，把开头的 `draft` 改成 `false`。也可以直接在 `content/posts/` 下新建 Markdown 文件。提交并推送到 `main` 后，GitHub Actions 会自动构建发布。
+打开生成的文件，把 `draft` 改成 `false`，并补上摘要。开头可以写成：
+
+```yaml
+---
+title: "文章标题"
+date: 2026-11-20
+draft: false
+description: "一句话说明这篇文章讲什么"
+summary: "列表和首页上显示的摘要"
+tags:
+  - Web
+---
+```
+
+正文用 Markdown 写在 front matter 下面。本地预览：
+
+```bash
+hugo server
+```
+
+浏览器打开 <http://localhost:1313/>，确认栏目页和文章都正常。提交并推送到 `main` 后，GitHub Actions 会执行 `hugo --minify` 并发布。
 
 ## 部署
 
