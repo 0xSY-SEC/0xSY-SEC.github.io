@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<rect x="8" y="8" width="1584" height="884" rx="28" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="800.0" y="64.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="34" font-weight="700" fill="#0f172a" text-anchor="middle">Electron 客户端架构与 IPC 安全设计示意图</text>
+<text x="800.0" y="100.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" font-weight="500" fill="#0e7490" text-anchor="middle">Renderer / preload / Main Process 的关系与安全边界</text>
+<line x1="520.0" y1="118.0" x2="1080.0" y2="118.0" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+<rect x="48.0" y="160.0" width="310.0" height="250.0" rx="18" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+<text x="203.0" y="210.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">Renderer Process</text>
+<text x="203.0" y="250.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#475569" text-anchor="middle">页面渲染 / Web 内容</text>
+<rect x="390.0" y="160.0" width="310.0" height="250.0" rx="18" fill="#ffffff" stroke="#0369a1" stroke-width="2"/>
+<text x="545.0" y="210.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">preload</text>
+<text x="545.0" y="250.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#475569" text-anchor="middle">contextBridge 暴露受限接口</text>
+<rect x="732.0" y="160.0" width="310.0" height="250.0" rx="18" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+<text x="887.0" y="210.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">Main Process</text>
+<text x="887.0" y="250.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#475569" text-anchor="middle">系统能力 / 文件 / 更新 / IPC</text>
+<line x1="358.0" y1="280.0" x2="376.0" y2="280.0" stroke="#0e7490" stroke-width="3" stroke-linecap="round"/>
+<polygon points="388.0,280.0 374.0,273.0 374.0,287.0" fill="#0e7490"/>
+<line x1="700.0" y1="280.0" x2="718.0" y2="280.0" stroke="#0e7490" stroke-width="3" stroke-linecap="round"/>
+<polygon points="730.0,280.0 716.0,273.0 716.0,287.0" fill="#0e7490"/>
+<rect x="48.0" y="440.0" width="150.0" height="48.0" rx="12" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="123.0" y="470.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="600" fill="#0e7490" text-anchor="middle">文件访问</text>
+<rect x="210.0" y="440.0" width="150.0" height="48.0" rx="12" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="285.0" y="470.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="600" fill="#0e7490" text-anchor="middle">下载更新</text>
+<rect x="372.0" y="440.0" width="150.0" height="48.0" rx="12" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="447.0" y="470.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="600" fill="#0e7490" text-anchor="middle">安装执行</text>
+<rect x="534.0" y="440.0" width="150.0" height="48.0" rx="12" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="609.0" y="470.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="600" fill="#0e7490" text-anchor="middle">系统调用</text>
+<rect x="720.0" y="440.0" width="220.0" height="48.0" rx="12" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="830.0" y="470.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#0e7490" text-anchor="middle">仅允许受控调用</text>
+<rect x="48.0" y="520.0" width="180.0" height="48.0" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="138.0" y="550.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ef4444" text-anchor="middle">不可信页面</text>
+<rect x="250.0" y="520.0" width="160.0" height="48.0" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="330.0" y="550.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#059669" text-anchor="middle">安全边界</text>
+<text x="500.0" y="550.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="600" fill="#0e7490" text-anchor="start">受控 IPC</text>
+<rect x="1000.0" y="160.0" width="552.0" height="520.0" rx="18" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+<text x="1276.0" y="204.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle">安全设计原则</text>
+<circle cx="1040.0" cy="256.0" r="16" fill="#0e7490"/>
+<text x="1040.0" y="262.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="1080.0" y="248.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#0f172a" text-anchor="start">Renderer 不能直接获得任意 IPC 调用能力</text>
+<circle cx="1040.0" cy="334.0" r="16" fill="#0e7490"/>
+<text x="1040.0" y="340.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="1080.0" y="326.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#0f172a" text-anchor="start">preload 暴露接口必须最小化</text>
+<circle cx="1040.0" cy="412.0" r="16" fill="#0e7490"/>
+<text x="1040.0" y="418.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="1080.0" y="404.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#0f172a" text-anchor="start">IPC 通道必须设置白名单</text>
+<circle cx="1040.0" cy="490.0" r="16" fill="#0e7490"/>
+<text x="1040.0" y="496.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="1080.0" y="482.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#0f172a" text-anchor="start">高危通道必须校验调用来源</text>
+<circle cx="1040.0" cy="568.0" r="16" fill="#0e7490"/>
+<text x="1040.0" y="574.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="1080.0" y="560.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="500" fill="#0f172a" text-anchor="start">下载、安装、执行等能力必须二次校验</text>
+<rect x="48.0" y="760.0" width="1504.0" height="52.0" rx="16" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="800.0" y="793.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="17" font-weight="500" fill="#0f172a" text-anchor="middle">说明：该图用于说明 Renderer、preload 与 Main Process 的安全边界，以及 IPC 设计的关键原则。</text>
+</svg>

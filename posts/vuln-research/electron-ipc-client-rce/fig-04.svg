@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<rect x="8" y="8" width="1584" height="884" rx="28" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="800.0" y="64.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="34" font-weight="700" fill="#0f172a" text-anchor="middle">IPC send 接口暴露风险示意图</text>
+<text x="800.0" y="100.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" font-weight="500" fill="#0e7490" text-anchor="middle">通用 send 能力不应直接暴露给不可信页面</text>
+<line x1="520.0" y1="118.0" x2="1080.0" y2="118.0" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+<rect x="40.0" y="160.0" width="720.0" height="520.0" rx="18" fill="#ffffff" stroke="#0e7490" stroke-width="2.5"/>
+<text x="68.0" y="204.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#0e7490" text-anchor="start">preload 暴露接口（示意）</text>
+<text x="80.0" y="260.0" font-family="'Cascadia Code','Consolas','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace" font-size="20" font-weight="500" fill="#0f172a" text-anchor="start">contextBridge.exposeInMainWorld('api', {</text>
+<text x="80.0" y="292.0" font-family="'Cascadia Code','Consolas','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace" font-size="20" font-weight="500" fill="#0f172a" text-anchor="start">  sendToMain: (channel, data) =&gt; {</text>
+<text x="80.0" y="324.0" font-family="'Cascadia Code','Consolas','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace" font-size="20" font-weight="500" fill="#0f172a" text-anchor="start">    ipcRenderer.send(channel, data)</text>
+<text x="80.0" y="356.0" font-family="'Cascadia Code','Consolas','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace" font-size="20" font-weight="500" fill="#0f172a" text-anchor="start">  },</text>
+<text x="80.0" y="388.0" font-family="'Cascadia Code','Consolas','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace" font-size="20" font-weight="500" fill="#0f172a" text-anchor="start">  send: (...args) =&gt; ipcRenderer.send(...args)</text>
+<text x="80.0" y="420.0" font-family="'Cascadia Code','Consolas','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',monospace" font-size="20" font-weight="500" fill="#0f172a" text-anchor="start">})</text>
+<rect x="68.0" y="500.0" width="660.0" height="130.0" rx="14" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+<text x="398.0" y="552.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#ef4444" text-anchor="middle">缺少来源校验 / 通道白名单</text>
+<text x="398.0" y="592.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" font-weight="500" fill="#b91c1c" text-anchor="middle">任意页面可尝试发送 IPC 消息</text>
+<rect x="980.0" y="170.0" width="570.0" height="170.0" rx="18" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+<text x="1265.0" y="235.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="28" font-weight="700" fill="#0f172a" text-anchor="middle">不可信网页</text>
+<text x="1265.0" y="278.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" font-weight="500" fill="#475569" text-anchor="middle">远程页面 / 恶意链接</text>
+<rect x="980.0" y="490.0" width="570.0" height="180.0" rx="18" fill="#ecfeff" stroke="#0e7490" stroke-width="2.5"/>
+<text x="1265.0" y="560.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="28" font-weight="700" fill="#0f172a" text-anchor="middle">Main Process</text>
+<text x="1265.0" y="604.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" font-weight="500" fill="#475569" text-anchor="middle">文件 / 更新 / 执行等能力</text>
+<line x1="1265.0" y1="350.0" x2="1265.0" y2="470.0" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+<polygon points="1265,482 1257,466 1273,466" fill="#ef4444"/>
+<text x="1290.0" y="420.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#d97706" text-anchor="start">IPC send</text>
+<rect x="790.0" y="360.0" width="150.0" height="120.0" rx="14" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+<path d="M844 382 h22 l-8 16 h14 l-26 32 6 -20 h-14 z" fill="#ef4444"/>
+<text x="865.0" y="456.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#ef4444" text-anchor="middle">边界失效</text>
+<rect x="48.0" y="760.0" width="1504.0" height="52.0" rx="16" fill="#ecfeff" stroke="#0e7490" stroke-width="1.5"/>
+<text x="800.0" y="793.0" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="17" font-weight="500" fill="#0f172a" text-anchor="middle">示意只保留 exposeInMainWorld / sendToMain / ipcRenderer.send 的伪结构，不含真实通道或载荷。</text>
+</svg>
