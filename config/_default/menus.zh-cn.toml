@@ -104,6 +104,10 @@
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
+[[footer]]
+  name = "RSS 订阅"
+  url = "/index.xml"
+  weight = 10
 
 # [[footer]]
 #   name = "Tags"
